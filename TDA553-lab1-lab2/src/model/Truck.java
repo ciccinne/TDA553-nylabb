@@ -4,7 +4,6 @@ import java.awt.*;
 public abstract class Truck extends MotorVehicle {
     private Trim trim;
     private IPlatform platform;
-    private final static double trimFactor = 1.25;
         
     public Truck(int nrDoors, Color color, int enginePower, String modelName, double X, double Y, double trimFactor, IPlatform platform) {
         super(nrDoors, color, enginePower, modelName, X, Y);
