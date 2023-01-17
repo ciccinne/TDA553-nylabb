@@ -1,0 +1,24 @@
+Vi skapade en abstrakt klass MotorVehicle, som används som supertyp för bland annat Volvo och Scania.
+Kontraktet mellan gas() och MotorVehicle att gas() kallar på incrementSpeed som i sin tur ökar
+hastigheten för objektet som ärver från MotorVehicle. Brake() kallar på decrementSpeed som i sin tur
+minskar hastigheten för objektet. Dock så kommer vi bara att gasa om det är möjligt då Scania endast
+kommer att gasa när plattformen inte används. På så sätt följer gas() och break() kontraktet när alla
+krav är uppfyllda.
+
+ 
+Vi har aktivt försökt att undvika kod-duplicering genom att att använda oss av composition och
+delegation. När vi har en “has a” relation har vi använt oss av delegering genom att skapa en ny klass
+som innehåller den kod som våra objekt delar. T.ex hade vi först en interface ILoadable som innehöll
+load() och unLoad() men vi märkte sedan att vi då fick duplicerad kod i de klasser som implementerade
+interfacet, vi gjorde då en klass Loadable() istället för att undvika detta.
+Har vi istället en “is a” relation så har vi använt oss utav subclassing så att våra objekt istället
+kan ärva koden. T.ex har vi gjort en superklass MotorVehicle som våra klasser Car och Truck får ärva
+från. MotorVehicle innehåller allting som Car och Truck har gemensamt, deras typspecifika kod ligger
+sedan individuellt i deras egna klasser.
+
+
+I samband med att fler komponenter behövde implementeras i labb 2 fick vi en större helhetssyn på
+hur skapandet av våra nya objekt kunde åstadkommas. Vi gjorde många små ändringar allteftersom men
+våran största ändring är att vi skapade en mer allomfattande klass (MotorVehicle) där alla fordon
+kan skapas med samma kod. Istället för att all kod ska ligga i Car och Truck gjorde vi denna
+superklassen då vi insåg att de delade många egenskaper, t.ex gas() och break().

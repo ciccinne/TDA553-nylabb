@@ -1,0 +1,22 @@
+Open-closed principle innebär att vi måste tänka på att vi lätt ska kunna bygga vidare och utveckla vår kod i
+framtiden utan att behöva ändra funktionaliteten. Vi valde att använda oss utav subclassing istället för 
+interface då metoderna hade mycket kod gemensamt.Vi gjorde en superclass Car som innehöll allting som 
+Saab och Volvo hade gemensamt (det som utgör vad en bil är) och våra bilar får därefter ärva dessa kännetecken.
+Vi kan således i framtiden lätt göra flera bilar som har samma grundläggande egenskaper. Detta innebär att 
+vi implementerar minsta möjliga antal "funktioner" för syftet i en enda metod.
+
+gas() and brake() only accept values in the interval [0,1]:
+Vi gjorde en if-sats för att utesluta alla värden utanför intervallet [0, 1]. Så om amount är t.ex -1 
+kommer ingenting att hända, men om amount är i intervallet kommer den att öka hastigheten genom incrementSpeed.
+
+currentSpeed always lies in the interval [0 , enginePower]:
+Vi gjorde en if-sats i incrementSpeed där vi säger att currentSpeed aldrig kan bli större än enginePower, 
+om den är större kommer currentSpeed att sättas till enginePower. I decrementSpeed gjorde vi en if-sats 
+som ser till att currentSpeed aldrig blir mindre än 0, och om den blir mindre sätts den istället till 0.
+
+calls to gas() cannot result in the speed decreasing: 
+Eftersom vi implementerat intervall som gör att amount endast kan vara ett positivt värde kan detta inte hända.
+
+calls to brake() cannot result in the speed increasing:
+Vi implementerade ett intervall där där vi aldrig kan få ett positivt värde kommer speed aldrig öka när 
+vi kallar på break. 
