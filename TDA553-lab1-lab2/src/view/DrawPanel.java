@@ -11,6 +11,9 @@ public class DrawPanel extends JPanel{
 
     // Just a single image, TODO: Generalize
     BufferedImage volvoImage;
+    BufferedImage saabImage;
+    BufferedImage scaniaImage;
+
     // To keep track of a singel cars position
     Point volvoPoint = new Point();
     Point saab95Point = new Point();
@@ -56,6 +59,6 @@ public class DrawPanel extends JPanel{
         super.paintComponent(g);
         g.drawImage(volvoImage, volvoPoint.x, volvoPoint.y, null); // see javadoc for more info on the parameters
         g.drawImage(saabImage, saab95Point.x, saab95Point.y, null);
-        g.drawImage(scaniaImage, scaniaPoint.x, scaniaPoint.y, null)
+        g.drawImage(scaniaImage, scaniaPoint.x, scaniaPoint.y, null);
     }
 }

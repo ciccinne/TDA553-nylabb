@@ -3,7 +3,7 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class Transporter extends Truck { 
-    private IPlatform flatbed;
+    private Flatbed flatbed;
     private Loadable load;
     
 
@@ -42,7 +42,7 @@ public class Transporter extends Truck {
 
     public void useFlatbed(double amount){   // Delegerar                          
         if (getCurrentSpeed() == 0) {
-            flatbed.lowerFlatbed(amount);
+            flatbed.lowerFlatbed();
         }
     }
 
