@@ -2,8 +2,6 @@ package model;
 import java.awt.*;
 import java.util.ArrayList;
 
-import model.Flatbed;
-
 public class Transporter extends Truck { 
     private Flatbed flatbed;
     private Loadable load;
