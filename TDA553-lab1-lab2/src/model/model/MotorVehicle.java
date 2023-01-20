@@ -1,10 +1,10 @@
 package model;
-import controller.Observer;
+import controller.IObserver;
 
 import java.awt.*;
 import java.lang.Math;
 
-public abstract class MotorVehicle implements IMovable, Observer  {                                                        
+public abstract class MotorVehicle implements IMovable, IObserver  {                                                        
     private int nrDoors; // Number of doors on the car
     private double enginePower; // Engine power of the car
     private double currentSpeed; // The current speed of the car

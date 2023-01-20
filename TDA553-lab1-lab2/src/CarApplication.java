@@ -1,6 +1,5 @@
 import model.*;
 import controller.CarController;
-import controller.Timekeeper;
 import view.*;
 
 import java.util.ArrayList;
@@ -16,10 +15,9 @@ public class CarApplication {
 
         CarController cc = new CarController(cars);
 
+        DrawPanel view = new DrawPanel(850, 800-250);
         Timekeeper timer = new Timekeeper();
         for (MotorVehicle car : cars) {timer.addObserver(car);}
-
-        DrawPanel view = new DrawPanel(850, 800-250);
         timer.addObserver(view);
 
         new CarView("CarSim 1.0", cc, view);

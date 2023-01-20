@@ -1,5 +1,5 @@
 package controller;
 
-public interface Observer {
+public interface IObserver {
     void update();
 }
