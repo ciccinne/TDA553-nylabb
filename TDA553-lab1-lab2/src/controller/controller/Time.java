@@ -1,19 +1,15 @@
+package controller;
 
 import java.util.List;
 import java.util.ArrayList;
 import javax.swing.*;
 
-import controller.Config;
-import controller.IObserver;
-import model.MotorVehicle;
-import view.DrawPanel;
-
-public class Timekeeper {
-    private final int delay = Config.getDelay();
+public class Time {
+    private final int delay = Configuration.getDelay();
     private final Timer timer;
     private final List<IObserver> observers;
 
-    public Timekeeper() {
+    public Time() {
         observers = new ArrayList<>();
         timer = new Timer(delay, e -> {
             for (IObserver o : observers) {o.update();}

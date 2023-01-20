@@ -6,8 +6,8 @@ import java.awt.*;
 import javax.swing.*;
 
 public class ControlPanel extends JPanel{
-    private final int WIDTH = Config.getWidth();
-    private final int HEIGHT = Config.getHeight();
+    private final int WIDTH = Configuration.getWidth();
+    private final int HEIGHT = Configuration.getHeight();
 
     public ControlPanel(List<MotorVehicle> cars, GasSpinner gasSpinner) {
         setLayout(new GridLayout(2, 4));

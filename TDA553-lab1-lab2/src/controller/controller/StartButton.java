@@ -7,7 +7,7 @@ import javax.swing.*;
 import model.MotorVehicle;
 
 public class StartButton extends JButton{
-    private final int X = Config.getWidth();
+    private final int X = Configuration.getWidth();
 
     public StartButton(List<MotorVehicle> cars) {
         super("Start all cars");

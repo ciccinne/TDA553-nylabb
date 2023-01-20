@@ -7,7 +7,7 @@ import javax.swing.*;
 import model.MotorVehicle;
 
 public class StopButton extends JButton{
-    private final int X = Config.getWidth();
+    private final int X = Configuration.getWidth();
 
     public StopButton(List<MotorVehicle> cars) {
         super("Stop all cars");
