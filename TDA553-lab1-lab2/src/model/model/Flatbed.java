@@ -1,4 +1,4 @@
-
+package model;
 
 public class Flatbed implements IPlatform {
     private int state;                               // State = 1; platformen är uppe, state = 0; plattformen är nere.

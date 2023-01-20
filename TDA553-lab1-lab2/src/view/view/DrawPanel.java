@@ -1,12 +1,15 @@
+package view;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import controller.IObserver;
 
 // This panel represent the animated part of the view with the car images.
 
-public class DrawPanel extends JPanel{
+public class DrawPanel extends JPanel implements IObserver{
 
     // Just a single image, TODO: Generalize
     BufferedImage volvoImage;
@@ -48,6 +51,7 @@ public class DrawPanel extends JPanel{
         {
             ex.printStackTrace();
         }
+        updateImageCoord(0, 0);
 
     }
 
@@ -56,8 +60,14 @@ public class DrawPanel extends JPanel{
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        
         g.drawImage(volvoImage, volvoPoint.x, volvoPoint.y, null); // see javadoc for more info on the parameters
         g.drawImage(saabImage, saab95Point.x, saab95Point.y, null);
         g.drawImage(scaniaImage, scaniaPoint.x, scaniaPoint.y, null);
+    }
+
+    @Override
+    public void update() {
+        paintComponent(getGraphics());
     }
 }

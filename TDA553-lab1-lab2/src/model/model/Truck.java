@@ -1,4 +1,4 @@
-
+package model;
 import java.awt.*;
 
 public abstract class Truck extends MotorVehicle {

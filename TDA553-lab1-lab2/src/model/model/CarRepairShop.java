@@ -1,4 +1,4 @@
-
+package model;
 
 public class CarRepairShop  {
     private Loadable load;

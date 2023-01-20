@@ -1,3 +1,5 @@
+package model;
+
 public class Trim {
     private double trimFactor;
     private double enginePower;

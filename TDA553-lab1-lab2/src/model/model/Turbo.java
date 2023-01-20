@@ -1,3 +1,5 @@
+package model;
+
 public class Turbo {
     private boolean turboOn;
     private double turboOffValue;
