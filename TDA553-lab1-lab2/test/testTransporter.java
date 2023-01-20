@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.awt.*;
 import org.junit.Test;
 
+import model.Saab95;
+
 
 public class testTransporter {
     @Test

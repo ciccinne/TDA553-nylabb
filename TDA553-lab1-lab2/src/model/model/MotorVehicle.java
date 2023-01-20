@@ -1,8 +1,10 @@
+package model;
+import controller.Observer;
 
 import java.awt.*;
 import java.lang.Math;
 
-public abstract class MotorVehicle implements IMovable  {                                                        
+public abstract class MotorVehicle implements IMovable, Observer  {                                                        
     private int nrDoors; // Number of doors on the car
     private double enginePower; // Engine power of the car
     private double currentSpeed; // The current speed of the car
@@ -93,6 +95,11 @@ public abstract class MotorVehicle implements IMovable  {
     public void move() {
         X += currentSpeed * Math.cos(angle);
         Y += currentSpeed * Math.sin(angle);
+    }
+
+    @Override
+    public void update(){
+        move();
     }
 
     public void turnLeft() {

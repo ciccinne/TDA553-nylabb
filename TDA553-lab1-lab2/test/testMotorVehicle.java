@@ -3,6 +3,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.Test;
 
+import model.Saab95;
+
 public class testMotorVehicle {
     @Test
     public void test() {

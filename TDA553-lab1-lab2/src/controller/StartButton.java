@@ -4,12 +4,12 @@ import java.util.List;
 import java.awt.*;
 import javax.swing.*;
 
-import Model.Vehicle;
+import model.MotorVehicle;
 
 public class StartButton extends JButton{
     private final int X = Config.getWidth();
 
-    public StartButton(List<Vehicle> cars) {
+    public StartButton(List<MotorVehicle> cars) {
         super("Start all cars");
 
         setBackground(Color.blue);
@@ -17,7 +17,7 @@ public class StartButton extends JButton{
         setPreferredSize(new Dimension(X/5-15,200));
 
         addActionListener(actionListener -> {
-            for (Vehicle car : cars) {car.startEngine();}
+            for (MotorVehicle car : cars) {car.startEngine();}
         });
     }
 }

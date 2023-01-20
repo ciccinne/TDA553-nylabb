@@ -1,5 +1,5 @@
 package controller;
-import Model.Vehicle;
+import model.MotorVehicle;
 
 import java.util.List;
 import java.awt.*;
@@ -9,7 +9,7 @@ public class ControlPanel extends JPanel{
     private final int WIDTH = Config.getWidth();
     private final int HEIGHT = Config.getHeight();
 
-    public ControlPanel(List<Vehicle> cars, GasSpinner gasSpinner) {
+    public ControlPanel(List<MotorVehicle> cars, GasSpinner gasSpinner) {
         setLayout(new GridLayout(2, 4));
         JButton brakeButton = new JButton("Brake");
         JButton turboOnButton = new JButton("Saab Turbo on");

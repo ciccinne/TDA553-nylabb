@@ -4,12 +4,12 @@ import java.util.List;
 import java.awt.*;
 import javax.swing.*;
 
-import Model.Vehicle;
+import model.MotorVehicle;
 
 public class StopButton extends JButton{
     private final int X = Config.getWidth();
 
-    public StopButton(List<Vehicle> cars) {
+    public StopButton(List<MotorVehicle> cars) {
         super("Stop all cars");
 
         setBackground(Color.red);
@@ -17,7 +17,7 @@ public class StopButton extends JButton{
         setPreferredSize(new Dimension(X/5-15,200));
 
         addActionListener(actionListener -> {
-            for (Vehicle car : cars) {car.stopEngine();}
+            for (MotorVehicle car : cars) {car.stopEngine();}
         });
     }
 }

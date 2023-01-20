@@ -1,14 +1,14 @@
 package controller;
 
-import Model.Vehicle;
+import model.MotorVehicle;
 import java.util.List;
 import javax.swing.*;
 
 public class GasButton extends JButton{
-    public GasButton(List<Vehicle> cars, GasSpinner spinner){
+    public GasButton(List<MotorVehicle> cars, GasSpinner spinner){
         super("Gas");
         addActionListener(actionlistener -> {
-            for (Vehicle car : cars) {
+            for (MotorVehicle car : cars) {
                 car.gas(spinner.getGasAmount());
             }
         });

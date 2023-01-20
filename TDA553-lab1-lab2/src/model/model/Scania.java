@@ -1,4 +1,4 @@
-
+package model;
 import java.awt.*;
 
 public class Scania extends Truck{                        // Static gör att det tillhör hela klassen. Ändrar vi värdet så ändras det för alla instanser av klassen, alltså inte unikt för varje instans.
