@@ -3,7 +3,7 @@ package model;
 public class CarRepairShop  {
     private Loadable load;
 
-    public CarRepairShop(int maxNrCars, double x, double y){
+    public CarRepairShop(int maxNrCars, int x, int y){
         this.load = new Loadable(maxNrCars, x, y);
     }
 

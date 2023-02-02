@@ -11,12 +11,12 @@ public abstract class MotorVehicle implements IMovable, IObserver  {
     private Color color; // Color of the car                     // typ color?
     private String modelName; // The car model name
     
-    private double X;
-    private double Y;
+    private int X;
+    private int Y;
     private double angle;
 
     
-    public MotorVehicle(int nrDoors, Color color, int enginePower, String modelName, double X, double Y) {                        
+    public MotorVehicle(int nrDoors, Color color, int enginePower, String modelName, int X, int Y) {                        
         this.nrDoors = nrDoors;
         this.color = color;     // kalla på Color ?
         this.enginePower = enginePower;
@@ -118,19 +118,19 @@ public abstract class MotorVehicle implements IMovable, IObserver  {
         return this.angle;
     }
 
-    public double getX() {                                                  // public pga. get
+    public int getX() {                                                  // public pga. get
         return this.X;
     }
 
-    public double getY() {                                                  // public pga. get
+    public int getY() {                                                  // public pga. get
         return this.Y;
     }
 
-    protected void setX(double x) {
+    protected void setX(int x) {
         this.X = x;
     }
 
-    protected void setY(double y) {
+    protected void setY(int y) {
         this.Y = y;
     }
 

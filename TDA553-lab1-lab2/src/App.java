@@ -11,12 +11,12 @@ public class App {
         List<MotorVehicle> vehicles = new ArrayList<>();
 
         vehicles.add(new Volvo240(0, 0, 1.3));
-        vehicles.add(new Saab95(0, 0));
-        vehicles.add(new Scania(0, 0, 1.3));
+        vehicles.add(new Saab95(0, 100));
+        vehicles.add(new Scania(0, 200, 1.3));
 
         CarController cc = new CarController(vehicles);
 
-        DrawPanel view = new DrawPanel(850, 800-250);
+        DrawPanel view = new DrawPanel(850, 800-250, vehicles);
         Time timer = new Time();
         for (MotorVehicle car : vehicles) {timer.addObserver(car);}
         timer.addObserver(view);

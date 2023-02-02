@@ -7,21 +7,21 @@ public class Transporter extends Truck {
     private Loadable load;
     
 
-    public Transporter(int nrDoors, Color color, int enginePower, String modelString, double X, double Y, int maxNrCars, double trimFactor, Flatbed flatbed) {
+    public Transporter(int nrDoors, Color color, int enginePower, String modelString, int X, int Y, int maxNrCars, double trimFactor, Flatbed flatbed) {
         super(nrDoors, color, enginePower, modelString, X, Y, trimFactor, flatbed);
         this.flatbed = flatbed;                                    // Composition -> vi skapar en instans av platform och lägger den som ett attrebut till instanserna av scania
         this.load = new Loadable(maxNrCars, X, Y);
     }
 
-    public Transporter(int nrDoors, Color color, int enginePower, String modelString, double X, double Y, int maxNrCars, double trimFactor) {
+    public Transporter(int nrDoors, Color color, int enginePower, String modelString, int X, int Y, int maxNrCars, double trimFactor) {
         this(nrDoors, color, enginePower, modelString, X, Y, maxNrCars, trimFactor, new Flatbed());
     }
     
     @Override
     public void move() {
-        double newX = getX() + this.getCurrentSpeed() * Math.cos(this.getAngle());
+        int newX = (int) (getX() + this.getCurrentSpeed() * Math.cos(this.getAngle()));
         this.setX(newX);
-        double newY = getY() + this.getCurrentSpeed() * Math.sin(this.getAngle());
+        int newY = (int)(getY() + this.getCurrentSpeed() * Math.sin(this.getAngle()));
         this.setY(newY);
 
         load.setX(newX);

@@ -6,11 +6,11 @@ public class Loadable {
     private int lastIndex = carsLoaded.size() - 1;
     private Car currentCar;
     private int maxCars;
-    private double x;
-    private double y;
+    private int x;
+    private int y;
 
 
-    public Loadable(int maxNrCars, double x, double y){
+    public Loadable(int maxNrCars, int x, int y){
         this.maxCars =  maxNrCars;
         this.x = x;
         this.y = y;
@@ -20,11 +20,11 @@ public class Loadable {
         return carsLoaded;
     }
 
-    public void setX(double X) {
+    public void setX(int X) {
         this.x = X;
     }
 
-    public void setY(double Y) {
+    public void setY(int Y) {
         this.y = Y;
     }
 
